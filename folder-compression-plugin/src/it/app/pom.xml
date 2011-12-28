@@ -21,6 +21,7 @@
                             <goal>compression</goal>
                         </goals>
                         <configuration>
+                            <!-- support types: ZIP, CPIO, TAR, JAR -->
                             <compressionType>ZIP</compressionType>
                             <concatVersion>true</concatVersion>
                             <excludedKeys>
