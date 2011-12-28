@@ -6,8 +6,8 @@ import java.io.IOException;
 
 import org.apache.commons.compress.archivers.ArchiveEntry;
 import org.apache.commons.compress.archivers.ArchiveOutputStream;
-import org.apache.commons.compress.archivers.cpio.CpioArchiveEntry;
-import org.apache.commons.compress.archivers.cpio.CpioArchiveOutputStream;
+import org.apache.commons.compress.archivers.jar.JarArchiveOutputStream;
+import org.apache.commons.compress.archivers.zip.ZipArchiveEntry;
 
 import com.googlecode.usc.folder.compression.Strategy;
 
@@ -15,14 +15,15 @@ import com.googlecode.usc.folder.compression.Strategy;
  *
  * @author ShunLi
  */
-public class CpioStrategy extends Strategy {
+public class JarStrategy extends Strategy {
     @Override
     public ArchiveOutputStream getArchiveOutputStream(FileOutputStream fos) throws IOException {
-        return new CpioArchiveOutputStream(fos);
+        return new JarArchiveOutputStream(fos);
     }
 
     @Override
     public ArchiveEntry getArchiveEntry(File inputFile, String entryName) {
-        return new CpioArchiveEntry(inputFile, entryName);
+        return new ZipArchiveEntry(inputFile, entryName);
     }
+
 }

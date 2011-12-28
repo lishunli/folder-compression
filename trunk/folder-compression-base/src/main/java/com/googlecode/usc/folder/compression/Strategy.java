@@ -37,7 +37,7 @@ public abstract class Strategy {
 
             try {
                 fos = new FileOutputStream(out);
-                aos = getArchiveOutputStream(new FileOutputStream(out));
+                aos = getArchiveOutputStream(fos);
 
                 for (Map.Entry<String, File> entry : map.entrySet()) {
                     File file = entry.getValue();
