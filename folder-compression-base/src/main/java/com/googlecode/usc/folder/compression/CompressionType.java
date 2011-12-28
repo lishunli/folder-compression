@@ -8,9 +8,9 @@ package com.googlecode.usc.folder.compression;
  */
 public enum CompressionType {
     ZIP(".zip"),
-    AR(".ar"),
+//    AR(".ar"),
     CPIO(".crio"),
-    DUMP(".dump"),
+//    DUMP(".dump"),
     TAR(".tar"),
     JAR(".jar"),
     BZIP2(".bzip2"),
