@@ -33,6 +33,13 @@
     <build>
         <finalName>${project.name}</finalName>
 
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/bin</directory>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
