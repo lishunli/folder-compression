@@ -17,7 +17,7 @@ public final class CompressionUtil {
     public final static String SPILT_CHAR = " | ";
     public final static String DEFAULT_EXCLUDED_WORDS = ".svn" + SPILT_CHAR + "target" + SPILT_CHAR + ".classpath" + SPILT_CHAR + ".project" + SPILT_CHAR + ".settings";
 
-    public static boolean isYse(String next) {
+    public static boolean isYes(String next) {
         // StringUtils.isBlank(next) ||
         if (YES_LIST.contains(next)) {
             return true;
