@@ -45,7 +45,7 @@ public class App1 {
 
         System.out.print("是否按照默认的过滤规则(" + CompressionUtil.DEFAULT_EXCLUDED_WORDS + ")来压缩？(Y/N)：");
 
-        boolean isUseDefault = CompressionUtil.isYse(scanner.next());
+        boolean isUseDefault = CompressionUtil.isYes(scanner.next());
 
         String excludedWords = "";
 
@@ -57,7 +57,7 @@ public class App1 {
             isAgain = scanner.next();
         }
 
-        if (!isUseDefault || CompressionUtil.isYse(isAgain)) {
+        if (!isUseDefault || CompressionUtil.isYes(isAgain)) {
             System.out.print("请添加过滤规则，多个过滤词以\"" + CompressionUtil.SPILT_CHAR + "\"分割：");
             scanner.nextLine();
             excludedWords = excludedWords + (!"".equals(excludedWords) ? CompressionUtil.SPILT_CHAR : "") + scanner.nextLine(); //
